@@ -22,6 +22,7 @@ Partial Class frmAverageUnitsShippedByEmployee
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.lblOutput1 = New System.Windows.Forms.Label()
         Me.txtDisplay1 = New System.Windows.Forms.TextBox()
         Me.lblDay = New System.Windows.Forms.Label()
@@ -38,6 +39,7 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.lblEmployee1 = New System.Windows.Forms.Label()
         Me.lblEmployee2 = New System.Windows.Forms.Label()
         Me.lblEmployee3 = New System.Windows.Forms.Label()
+        Me.ttToopTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.SuspendLayout()
         '
         'lblOutput1
@@ -75,6 +77,7 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.lblDay.TabIndex = 0
         Me.lblDay.Text = "Day 1"
         Me.lblDay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.ttToopTip.SetToolTip(Me.lblDay, "Which day the value is going to be stored into")
         '
         'lblUnits
         '
@@ -87,6 +90,7 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.lblUnits.TabIndex = 1
         Me.lblUnits.Text = "&Units:"
         Me.lblUnits.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.ttToopTip.SetToolTip(Me.lblUnits, "Units shipped by the employee")
         '
         'txtInput
         '
@@ -106,6 +110,7 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.btnExit.Size = New System.Drawing.Size(179, 27)
         Me.btnExit.TabIndex = 15
         Me.btnExit.Text = "E&xit"
+        Me.ttToopTip.SetToolTip(Me.btnExit, "Quit program")
         Me.btnExit.UseVisualStyleBackColor = True
         '
         'btnEnter
@@ -117,6 +122,7 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.btnEnter.Size = New System.Drawing.Size(179, 27)
         Me.btnEnter.TabIndex = 13
         Me.btnEnter.Text = "&Enter"
+        Me.ttToopTip.SetToolTip(Me.btnEnter, "Calculate Average")
         Me.btnEnter.UseVisualStyleBackColor = True
         '
         'btnReset
@@ -129,6 +135,7 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.btnReset.Size = New System.Drawing.Size(180, 27)
         Me.btnReset.TabIndex = 14
         Me.btnReset.Text = "&Reset"
+        Me.ttToopTip.SetToolTip(Me.btnReset, "Reset the form")
         Me.btnReset.UseVisualStyleBackColor = True
         '
         'lblOutput2
@@ -201,6 +208,7 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.lblEmployee1.TabIndex = 3
         Me.lblEmployee1.Text = "Employee 1"
         Me.lblEmployee1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.ttToopTip.SetToolTip(Me.lblEmployee1, "Employee 1")
         '
         'lblEmployee2
         '
@@ -213,6 +221,7 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.lblEmployee2.TabIndex = 6
         Me.lblEmployee2.Text = "Employee 2"
         Me.lblEmployee2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.ttToopTip.SetToolTip(Me.lblEmployee2, "Employee 2")
         '
         'lblEmployee3
         '
@@ -225,11 +234,14 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.lblEmployee3.TabIndex = 9
         Me.lblEmployee3.Text = "Employee 3"
         Me.lblEmployee3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.ttToopTip.SetToolTip(Me.lblEmployee3, "Employee 3")
         '
         'frmAverageUnitsShippedByEmployee
         '
+        Me.AcceptButton = Me.btnEnter
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.btnReset
         Me.ClientSize = New System.Drawing.Size(634, 363)
         Me.Controls.Add(Me.lblEmployee3)
         Me.Controls.Add(Me.lblEmployee2)
@@ -254,6 +266,7 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.Name = "frmAverageUnitsShippedByEmployee"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Average Units Shipped By Employee"
+        Me.ttToopTip.SetToolTip(Me, "Nice")
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -275,4 +288,5 @@ Partial Class frmAverageUnitsShippedByEmployee
     Friend WithEvents lblEmployee1 As Label
     Friend WithEvents lblEmployee2 As Label
     Friend WithEvents lblEmployee3 As Label
+    Friend WithEvents ttToopTip As ToolTip
 End Class
