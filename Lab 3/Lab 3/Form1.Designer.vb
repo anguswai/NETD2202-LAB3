@@ -48,7 +48,8 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.lblOutput1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblOutput1.Name = "lblOutput1"
         Me.lblOutput1.Size = New System.Drawing.Size(179, 23)
-        Me.lblOutput1.TabIndex = 12
+        Me.lblOutput1.TabIndex = 5
+        Me.lblOutput1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtDisplay1
         '
@@ -60,7 +61,7 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.txtDisplay1.Name = "txtDisplay1"
         Me.txtDisplay1.ReadOnly = True
         Me.txtDisplay1.Size = New System.Drawing.Size(180, 156)
-        Me.txtDisplay1.TabIndex = 11
+        Me.txtDisplay1.TabIndex = 4
         Me.txtDisplay1.TabStop = False
         '
         'lblDay
@@ -71,7 +72,7 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.lblDay.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblDay.Name = "lblDay"
         Me.lblDay.Size = New System.Drawing.Size(46, 18)
-        Me.lblDay.TabIndex = 10
+        Me.lblDay.TabIndex = 0
         Me.lblDay.Text = "Day 1"
         Me.lblDay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -83,7 +84,7 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.lblUnits.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblUnits.Name = "lblUnits"
         Me.lblUnits.Size = New System.Drawing.Size(46, 18)
-        Me.lblUnits.TabIndex = 8
+        Me.lblUnits.TabIndex = 1
         Me.lblUnits.Text = "&Units:"
         Me.lblUnits.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -94,7 +95,7 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.txtInput.Margin = New System.Windows.Forms.Padding(2)
         Me.txtInput.Name = "txtInput"
         Me.txtInput.Size = New System.Drawing.Size(66, 24)
-        Me.txtInput.TabIndex = 9
+        Me.txtInput.TabIndex = 2
         '
         'btnExit
         '
@@ -138,7 +139,8 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.lblOutput2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblOutput2.Name = "lblOutput2"
         Me.lblOutput2.Size = New System.Drawing.Size(179, 23)
-        Me.lblOutput2.TabIndex = 17
+        Me.lblOutput2.TabIndex = 8
+        Me.lblOutput2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtDisplay2
         '
@@ -150,7 +152,7 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.txtDisplay2.Name = "txtDisplay2"
         Me.txtDisplay2.ReadOnly = True
         Me.txtDisplay2.Size = New System.Drawing.Size(180, 156)
-        Me.txtDisplay2.TabIndex = 16
+        Me.txtDisplay2.TabIndex = 7
         Me.txtDisplay2.TabStop = False
         '
         'lblOutput3
@@ -161,7 +163,8 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.lblOutput3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblOutput3.Name = "lblOutput3"
         Me.lblOutput3.Size = New System.Drawing.Size(179, 23)
-        Me.lblOutput3.TabIndex = 19
+        Me.lblOutput3.TabIndex = 11
+        Me.lblOutput3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'txtDisplay3
         '
@@ -173,7 +176,7 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.txtDisplay3.Name = "txtDisplay3"
         Me.txtDisplay3.ReadOnly = True
         Me.txtDisplay3.Size = New System.Drawing.Size(180, 156)
-        Me.txtDisplay3.TabIndex = 18
+        Me.txtDisplay3.TabIndex = 10
         Me.txtDisplay3.TabStop = False
         '
         'lblOutputOverall
@@ -184,7 +187,8 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.lblOutputOverall.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblOutputOverall.Name = "lblOutputOverall"
         Me.lblOutputOverall.Size = New System.Drawing.Size(605, 23)
-        Me.lblOutputOverall.TabIndex = 20
+        Me.lblOutputOverall.TabIndex = 12
+        Me.lblOutputOverall.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'lblEmployee1
         '
@@ -194,7 +198,7 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.lblEmployee1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblEmployee1.Name = "lblEmployee1"
         Me.lblEmployee1.Size = New System.Drawing.Size(86, 18)
-        Me.lblEmployee1.TabIndex = 21
+        Me.lblEmployee1.TabIndex = 3
         Me.lblEmployee1.Text = "Employee 1"
         Me.lblEmployee1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -206,7 +210,7 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.lblEmployee2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblEmployee2.Name = "lblEmployee2"
         Me.lblEmployee2.Size = New System.Drawing.Size(86, 18)
-        Me.lblEmployee2.TabIndex = 22
+        Me.lblEmployee2.TabIndex = 6
         Me.lblEmployee2.Text = "Employee 2"
         Me.lblEmployee2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
@@ -218,7 +222,7 @@ Partial Class frmAverageUnitsShippedByEmployee
         Me.lblEmployee3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblEmployee3.Name = "lblEmployee3"
         Me.lblEmployee3.Size = New System.Drawing.Size(86, 18)
-        Me.lblEmployee3.TabIndex = 23
+        Me.lblEmployee3.TabIndex = 9
         Me.lblEmployee3.Text = "Employee 3"
         Me.lblEmployee3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
