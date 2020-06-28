@@ -36,50 +36,28 @@ Public Class frmAverageUnitsShippedByEmployee
                     For i = 0 To day - 1
                         textboxList(employee).Text &= Convert.ToString(unitsShipped(employee, i)) & vbNewLine
                         If day > 6 Then
-                            If employee > 2 Then
+                            ' Calculate and output average units shipped
+                            For j = 0 To day - 1
+                                total = total + unitsShipped(employee, j)
+                            Next
+                            average = Math.Round((total / day), 2)
+                            labelList(employee).Text = "Average: " + Convert.ToString(average)
+                            total = 0
+                            If employee < 2 Then
+                                employee += 1
+                            ElseIf employee = 2 Then
+                                lblDay.Text = "Day " + Convert.ToString(7)
+
                                 ' Disable user's ability to enter data
                                 txtInput.ReadOnly = True
                                 btnEnter.Enabled = False
                                 txtInput.TabStop = False
                                 btnEnter.TabStop = False
-
-                                ' This makes it stay at day 7 after the user has input a value
-                                day = day - 1
-
-
-                            Else
-                                ' Calculate and output average units shipped
-                                For j = 0 To day - 1
-                                    total = total + unitsShipped(employee, j)
-                                Next
-                                average = Math.Round((total / day), 2)
-                                labelList(employee).Text = "Average: " + Convert.ToString(average)
-                                employee += 1
                             End If
-                            day = 1
-
+                            day = 0
                         End If
                     Next
                     day += 1
-
-                    '' Displaying in this way is not efficient, but I could not
-                    ''   find any way to display existing entries with a for loop
-                    'If day = 1 Then
-                    '    ''txtDisplay.Text = Convert.ToString(unitsShipped(0))
-                    'ElseIf day = 2 Then
-                    '    ''txtDisplay.Text = Convert.ToString(unitsShipped(0)) & vbNewLine & Convert.ToString(unitsShipped(1))
-                    'ElseIf day = 3 Then
-                    '    ''txtDisplay.Text = Convert.ToString(unitsShipped(0)) & vbNewLine & Convert.ToString(unitsShipped(1)) & vbNewLine & Convert.ToString(unitsShipped(2))
-                    'ElseIf day = 4 Then
-                    '    ''txtDisplay.Text = Convert.ToString(unitsShipped(0)) & vbNewLine & Convert.ToString(unitsShipped(1)) & vbNewLine & Convert.ToString(unitsShipped(2)) & vbNewLine & Convert.ToString(unitsShipped(3))
-                    'ElseIf day = 5 Then
-                    '    ''txtDisplay.Text = Convert.ToString(unitsShipped(0)) & vbNewLine & Convert.ToString(unitsShipped(1)) & vbNewLine & Convert.ToString(unitsShipped(2)) & vbNewLine & Convert.ToString(unitsShipped(3)) & vbNewLine & Convert.ToString(unitsShipped(4))
-                    'ElseIf day = 6 Then
-                    '    ''txtDisplay.Text = Convert.ToString(unitsShipped(0)) & vbNewLine & Convert.ToString(unitsShipped(1)) & vbNewLine & Convert.ToString(unitsShipped(2)) & vbNewLine & Convert.ToString(unitsShipped(3)) & vbNewLine & Convert.ToString(unitsShipped(4)) & vbNewLine & Convert.ToString(unitsShipped(5))
-                    'Else ' Calculation starts after the user entered units shipped for day 7
-                    '    ''txtDisplay.Text = Convert.ToString(unitsShipped(0)) & vbNewLine & Convert.ToString(unitsShipped(1)) & vbNewLine & Convert.ToString(unitsShipped(2)) & vbNewLine & Convert.ToString(unitsShipped(3)) & vbNewLine & Convert.ToString(unitsShipped(4)) & vbNewLine & Convert.ToString(unitsShipped(5)) & vbNewLine & Convert.ToString(unitsShipped(6))
-
-                    'End If
 
                     ' Change day and clear txtInput after user presses enter
 
@@ -109,6 +87,10 @@ Public Class frmAverageUnitsShippedByEmployee
         For Each textboxToSet As TextBox In textboxList
             textboxToSet.Text = String.Empty
         Next
+        For Each labelToSet As Label In labelList
+            labelToSet.Text = String.Empty
+        Next
+        txtInput.Text = String.Empty
         ' Enable user's ability to enter data
         txtInput.ReadOnly = False
         btnEnter.Enabled = True
